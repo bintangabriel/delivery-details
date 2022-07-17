@@ -1,6 +1,7 @@
 // Import page
 import { Shipment } from "./pages/steptwo";
 import App from "./pages/stepone/indeks";
+import { Summary } from "./pages/stepthree/indeks";
 // import Article from "../container/home/pages/artikel/index"
 // import { SignIn } from "../components/signInCard";
 // import { ProfileTeamFamily } from "../container/home/pages/profileTeamFamily";
@@ -17,6 +18,11 @@ export const routes = [
     component: Shipment,
     exact: true,
     path: "/shipment",
+  },
+  {
+    component: Summary ,
+    exact: true,
+    path: "/summary",
   },
   // {
   //   component: SignIn,

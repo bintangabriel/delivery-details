@@ -1,17 +1,15 @@
 import { useState, useRef, useEffect } from "react";
-import { useForm } from "react-hook-form";
 import GameBox from "../../component/shipmentpayment/indeks";
 import { BoxGamesStyle, Style, SummaryStyle, WrapperStyle } from "./styles";
+import { Summary } from "../stepthree/indeks";
 
-export const Shipment = () => {
+export const Shipment = (dsfee) => {
     const [shipment, setShipment] = useState("");
     const [payment, setPayment] = useState("e-Wallet");
     const [eta, setEta] = useState("")
     const ref = useRef(null);
  
-    const goSend = () => {
-        setShipment(1);
-    }
+   
     useEffect(() => {
         const payment1 = document.getElementById("e-wallet");
         payment1.addEventListener('click', function onClick() {
@@ -58,7 +56,14 @@ export const Shipment = () => {
             setEta("1 day");
             setShipment("Personal Courier");
         });
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', function onClick(){
+            <Summary/>
+        })
     })
+    const tes = () => {
+        setEta(eta);
+    }
 
     // const paymentSet = (e) => {
     //     setPayment(e);
@@ -75,7 +80,7 @@ export const Shipment = () => {
                     </div>
                     <BoxGamesStyle>
                     <div className="Shipment">
-                        <GameBox ref={ref} _id="gosend" onClick={goSend} jenis="GO-SEND" harga="15,000"/>
+                        <GameBox ref={ref} _id="gosend" jenis="GO-SEND" harga="15,000"/>
                         <GameBox jenis="JNE" harga="9,000"/>
                         <GameBox jenis="Personal Courier" harga="29,000"/>
                     </div>
@@ -109,8 +114,10 @@ export const Shipment = () => {
                     <div>
                         <p id="estimation">Delivery Estimation</p>
                         <p id="service">{eta} by {shipment}</p>
+                        <p>{dsfee}</p>
                     </div>
-                    <button>Pay with {payment}</button>
+                    <button id="btn" onClick={Summary}>Pay with {payment}</button>
+                    <a href="/summary">continue</a>
                 </div>
             </SummaryStyle>
         </div>
