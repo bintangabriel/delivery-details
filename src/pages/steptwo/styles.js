@@ -17,6 +17,24 @@ export const Style = styled.div`
     color: #FF8A00;
   }
 
+  button{
+    width: 200px;
+    height: 100px;
+    /* background: #8648ba; */
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0.32vw  ;
+    flex-wrap: wrap;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+  }
+  button[id="gosend"],
+  button[id="e-wallet"]{
+    background: #028F4D;
+  }
+
   h1 {
     white-space: wrap;
     @media screen and (min-width: 768px) {
@@ -157,7 +175,20 @@ export const HeadingStyle = styled.div`
   }
 `;
 export const SummaryStyle = styled.div`
-  padding-bottom: 40vw;
+  padding-bottom: 30vw;
+  button{
+    width: 200px;
+    height: 50px;
+    background: #FF8A00;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0.32vw  ;
+    flex-wrap: wrap;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+  }
   .subHeader{
     /* margin-bottom: 30px; */
   }

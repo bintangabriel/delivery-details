@@ -5,18 +5,10 @@ export const Style = styled.div`
   background-position: center;
   /* display: flex; */
   flex-wrap: wrap;
-  /* padding: 120px 8vw; */
   padding: 100px 300px;
-  /* padding-bottom: 40px; */
-  /* padding-left: 20vw; */
   color: #FF8A00;
   text-align: center;
   margin-right: 30px;
-  /* @media screen and (min-width: 768px) {
-    padding-left: 2vw;
-    padding-right: 30vw;
-    padding-top: 15px;
-  } */
   .subHeader{
     color: #FF8A00;
   }
@@ -78,8 +70,34 @@ export const Style = styled.div`
 
 export const SummaryStyle = styled.div`
   padding-bottom: 40vw;
+  width: 20vw;
   .subHeader{
     /* margin-bottom: 30px; */
+  }
+  p[id="total"]{
+    color: #FF8A00;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  p[id="totalnumber"]{
+    color: #FF8A00;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  p[id="tit"]{
+    color: grey;
+  }
+  p[id="content"]{
+    color: black;
+    font-weight: bold;
+  }
+  .wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  .wraptwo{
+    display: flex;
+    justify-content: space-between;
   }
   p[id="tit"]{
     color: black;

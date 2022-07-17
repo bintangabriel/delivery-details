@@ -3,10 +3,10 @@ import GameBox from "../../component/shipmentpayment/indeks";
 import { BoxGamesStyle, Style, SummaryStyle, WrapperStyle } from "./styles";
 import { Summary } from "../stepthree/indeks";
 
-export const Shipment = (dsfee) => {
-    const [shipment, setShipment] = useState("");
+export const Shipment = () => {
+    const [shipment, setShipment] = useState("GO-SEND");
     const [payment, setPayment] = useState("e-Wallet");
-    const [eta, setEta] = useState("")
+    const [eta, setEta] = useState("today")
     const ref = useRef(null);
  
    
@@ -80,9 +80,6 @@ export const Shipment = (dsfee) => {
                     </div>
                     <BoxGamesStyle>
                     <div className="Shipment">
-                        <GameBox ref={ref} _id="gosend" jenis="GO-SEND" harga="15,000"/>
-                        <GameBox jenis="JNE" harga="9,000"/>
-                        <GameBox jenis="Personal Courier" harga="29,000"/>
                     </div>
                         <button id="gosend">GO-SEND</button>
                         <button id="jne">JNE</button>
@@ -93,9 +90,6 @@ export const Shipment = (dsfee) => {
                     </div>
                     <BoxGamesStyle>
                     <div className="Shipment">
-                        <GameBox jenis="e-Wallet" harga="1,500,000 left"/>
-                        <GameBox jenis="Bank Transfer" harga=""/>
-                        <GameBox jenis="Virtual Account" harga=""/>
                     </div>
                         <button id="e-wallet" >e-Wallet</button>
                         <button id="bank">Bank Transfer</button>
@@ -114,7 +108,6 @@ export const Shipment = (dsfee) => {
                     <div>
                         <p id="estimation">Delivery Estimation</p>
                         <p id="service">{eta} by {shipment}</p>
-                        <p>{dsfee}</p>
                     </div>
                     <button id="btn" onClick={Summary}>Pay with {payment}</button>
                     <a href="/summary">continue</a>

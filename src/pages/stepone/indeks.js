@@ -1,6 +1,5 @@
 import { useState, useHistory } from "react";
 import { useForm } from "react-hook-form";
-// import "./styles.css"
 import { Shipment } from "../steptwo";
 import { Style, SummaryStyle, WrapperStyle } from "./styles";
 
@@ -65,8 +64,8 @@ function App() {
               <input disabled={!isDropShipper} id="dn" {...register("dropshipperName")} placeholder="Dropshipper Name" />
               <input disabled={!isDropShipper} id="dpno" {...register("dropshipperPhoneNo")} placeholder="Dropshipper phone number" />
               <textarea maxLength="120" onChange={recalculte} {...register("deliveryAddress")} placeholder="Delivery Address" />
-              <p>{count}</p>
-              <p>{data}</p>
+              {/* <p>{count}</p>
+              <p>{data}</p> */}
               <input type="submit" value="continue to payment"/>
             </form><a href="/shipment">continue</a>
         </div>
@@ -92,8 +91,6 @@ function App() {
               <p id="totalnumber">{isDropShipper ? "505,000" : "500,000"}</p>
             </div>
             {/* <Shipment dsfee={isDropShipper} /> */}
-            <button id="btn"> Continue to Payment</button>
-            <a href="/summary">continue</a>
         </div>
     </SummaryStyle>
 </div>

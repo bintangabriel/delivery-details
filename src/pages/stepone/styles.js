@@ -27,7 +27,7 @@ export const Style = styled.div`
       sans-serif;
     display: block;
     box-sizing: border-box;
-    width: 400px;
+    width: 450px;
     height: 70px;
     border-radius: 4px;
     border: 1px solid white;
@@ -176,7 +176,7 @@ export const HeadingStyle = styled.div`
 `;
 export const SummaryStyle = styled.div`
   padding-bottom: 25vw;
-  width: 50%;
+  width: 30vw;
   padding-left: 10vw;
   .subHeader{
     /* margin-bottom: 30px; */
