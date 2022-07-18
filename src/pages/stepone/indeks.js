@@ -1,16 +1,15 @@
 import { useState, useHistory } from "react";
 import { useForm } from "react-hook-form";
-import { Shipment } from "../steptwo";
 import { Style, SummaryStyle, WrapperStyle } from "./styles";
 
 function App() {
+  // Declare all const needed
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
   const [isDropShipper, setIsDropShipper] = useState(false);
   const [count, setCount] = useState(0);
   const[number, setNumber] = useState(0);
   const[error, setError] = useState(false);
-  // const history = useHistory();
 
   const handleOnChange = () => {
     setIsDropShipper(!isDropShipper);
@@ -40,9 +39,6 @@ function App() {
     setIsDropShipper(isDropShipper);
   };
 
-  // function routePage() {
-  //   history.push('/shipment')
-  // };
 
   return (
     <div>
@@ -90,7 +86,6 @@ function App() {
               <p id="total">Total</p>
               <p id="totalnumber">{isDropShipper ? "505,000" : "500,000"}</p>
             </div>
-            {/* <Shipment dsfee={isDropShipper} /> */}
         </div>
     </SummaryStyle>
 </div>

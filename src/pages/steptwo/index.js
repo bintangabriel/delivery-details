@@ -9,7 +9,8 @@ export const Shipment = () => {
     const [eta, setEta] = useState("today")
     const ref = useRef(null);
  
-   
+   // using useEffect to add an event listener to some components
+   // in a way to update data in real time
     useEffect(() => {
         const payment1 = document.getElementById("e-wallet");
         payment1.addEventListener('click', function onClick() {
@@ -61,14 +62,6 @@ export const Shipment = () => {
             <Summary/>
         })
     })
-    const tes = () => {
-        setEta(eta);
-    }
-
-    // const paymentSet = (e) => {
-    //     setPayment(e);
-    // }
-    
     return(  
         <div>
         <WrapperStyle>
